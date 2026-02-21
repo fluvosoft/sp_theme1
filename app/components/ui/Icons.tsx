@@ -65,3 +65,24 @@ export function HeartIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function CheckIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={iconClass}
+      aria-hidden
+      {...props}
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}

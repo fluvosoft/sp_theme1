@@ -3,10 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  --pink-deep: #b8004d;
-  --pink-bright: #e60066;
-  --pink-light: #fce8f0;
-  --accent-yellow: #f5c542;
+  --dark-blue: #1e3a5f;
+  --dark-blue-light: #2a4a73;
+  --dark-blue-dark: #152a45;
+  --accent-green: #22c55e;
+  --accent-green-light: #4ade80;
 }
 
 @theme inline {
@@ -38,11 +39,10 @@ body {
 
 /* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid var(--pink-bright);
+  outline: 2px solid var(--accent-green);
   outline-offset: 2px;
 }
 
-/* Selection */
 ::selection {
-  background: rgba(230, 0, 102, 0.2);
+  background: rgba(34, 197, 94, 0.2);
 }

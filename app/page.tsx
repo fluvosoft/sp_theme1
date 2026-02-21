@@ -1,25 +1,26 @@
-import { THEME } from "./lib/constants";
 import {
   Hero,
-  VideoSection,
+  ProductDescription,
   Features,
-  Pricing,
-  FaqSection,
-  Reviews,
+  ProductGrid,
+  RefundPolicy,
   Contact,
   OrderForm,
   Footer,
 } from "./components/landing";
+import { THEME } from "./lib/constants";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-body text-white" style={{ backgroundColor: THEME.pink }}>
+    <div
+      className="min-h-screen font-body"
+      style={{ backgroundColor: THEME.darkBlue }}
+    >
       <Hero />
-      <VideoSection />
+      <ProductDescription />
       <Features />
-      <Pricing />
-      <FaqSection />
-      <Reviews />
+      <ProductGrid />
+      <RefundPolicy />
       <Contact />
       <OrderForm />
       <Footer />

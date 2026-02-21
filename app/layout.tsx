@@ -17,8 +17,8 @@ const notoSerifBengali = Noto_Serif_Bengali({
 });
 
 export const metadata: Metadata = {
-  title: "Saffron Goat Milk Soap | বাংলাদেশের সবচেয়ে জনপ্রিয় সাবান",
-  description: "Saffron Goat Milk Soap – মাত্র ৭ দিনে ত্বক হবে স্পটলেস, দুধের মতো ফর্সা। অর্ডার করুন এখনই।",
+  title: "Y100 Smartwatch with 11 Straps | মাত্র ২৪৯০ টাকায়",
+  description: "Y100 Smartwatch with 11 Straps – ব্লুটুথ কলিং, হার্ট রেট, ব্লাড প্রেশার, স্লিপ ট্র্যাকিং। অর্ডার করুন এখনই।",
 };
 
 export default function RootLayout({
@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bn" className={`${notoSansBengali.variable} ${notoSerifBengali.variable}`}>
-      <body className="font-body antialiased">
+    <html lang="bn" className={`${notoSansBengali.variable} ${notoSerifBengali.variable}`} suppressHydrationWarning>
+      <body className="font-body antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>

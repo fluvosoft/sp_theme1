@@ -1,44 +1,77 @@
-import { THEME } from "../../lib/constants";
+import { THEME, CTA_LABEL, PRODUCT_NAME, ORDER_UNIT_PRICE_BDT } from "../../lib/constants";
+import { CheckIcon } from "../ui/Icons";
+import CtaButton from "../ui/CtaButton";
 
 const FEATURES = [
-  "কাশ্মীরের সাফরন দিয়ে তৈরি — প্রথম ব্যবহার থেকেই পরিবর্তন দেখা যাবে",
-  "গোট মিল্ক — নরম ও মসৃণ ত্বকের জন্য",
-  "এসেনশিয়াল অয়েল — ব্রণ দূর করতে, ত্বক উজ্জ্বল করতে ও সানবার্ন কমাতে",
+  "Bluetooth calling and music playback",
+  "Heart rate monitoring",
+  "Blood pressure monitoring",
+  "Sleep tracking",
+  "Activity tracking",
+  "Calorie tracking",
+  "Sedentary reminder",
+  "Remote camera control",
+  "Water resistance rating of IP67",
 ];
 
 export default function Features() {
   return (
     <section
       className="px-4 py-14 md:px-8 md:py-20"
-      style={{ backgroundColor: THEME.pinkLight }}
+      style={{ backgroundColor: THEME.darkBlue }}
     >
-      <div className="mx-auto max-w-4xl">
-        <p className="font-heading text-center text-sm font-semibold uppercase tracking-widest md:text-base" style={{ color: THEME.pink }}>
-          কেন বেছে নেবেন
-        </p>
-        <h2 className="font-heading mt-2 text-center text-xl font-bold md:text-2xl lg:text-3xl" style={{ color: THEME.pink }}>
-          Saffron Goat Milk সাবান পছন্দের তালিকায় শীর্ষে থাকার কারণ
+      <div className="mx-auto max-w-5xl">
+        <h2 className="font-heading text-center text-xl font-bold text-white md:text-2xl lg:text-3xl">
+          কেন আপনার &quot;{PRODUCT_NAME}&quot; কেনা উচিৎ?
         </h2>
-        <p className="mt-3 text-center text-base text-gray-600 md:text-lg">
-          এই সাবানে কী কী আছে, জেনে নিন
-        </p>
-        <ul className="mt-10 space-y-5 md:mt-12 md:space-y-6">
-          {FEATURES.map((text, i) => (
-            <li
-              key={i}
-              className="flex items-start gap-4 rounded-xl bg-white/80 p-4 shadow-sm ring-1 ring-gray-200/60 md:p-5"
-            >
-              <span
-                className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-                style={{ backgroundColor: THEME.pink }}
-                aria-hidden
-              >
-                ✓
-              </span>
-              <span className="text-base leading-relaxed text-gray-800 md:text-lg">{text}</span>
-            </li>
-          ))}
-        </ul>
+
+        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+          {/* Left: watch image */}
+          <div className="aspect-square max-w-xs overflow-hidden rounded-xl bg-white/10 md:max-w-full">
+            <div className="flex h-full w-full items-center justify-center">
+              <div className="text-center text-white/50">
+                <span className="text-4xl font-bold">10:09</span>
+                <div className="mt-2 flex justify-center">
+                  <svg
+                    className="h-8 w-8"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden
+                  >
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                  </svg>
+                </div>
+                <p className="mt-1 text-xs">Smartwatch</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: feature list + pricing + CTA */}
+          <div className="flex flex-col justify-center space-y-6">
+            <ul className="space-y-2">
+              {FEATURES.map((text, i) => (
+                <li key={i} className="flex items-center gap-3 text-sm text-white md:text-base">
+                  <span style={{ color: THEME.green }}>
+                    <CheckIcon />
+                  </span>
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="rounded-xl bg-white/5 p-4 text-center">
+              <p className="text-lg text-white/90">
+                রেগুলার প্রাইজ <span className="line-through">(৩০০০ টাকা)</span>
+              </p>
+              <p className="mt-2 text-2xl font-bold" style={{ color: THEME.greenLight }}>
+                অফারে মাত্র {ORDER_UNIT_PRICE_BDT} টাকা
+              </p>
+              <p className="mt-1 text-sm text-white/70">(সীমিত সময়ের জন্য)</p>
+            </div>
+            <div className="flex justify-center">
+              <CtaButton>{CTA_LABEL}</CtaButton>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
