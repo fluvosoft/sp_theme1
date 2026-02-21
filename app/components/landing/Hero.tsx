@@ -4,34 +4,33 @@ import CtaButton from "../ui/CtaButton";
 export default function Hero() {
   return (
     <section
-      className="px-4 py-12 md:px-8 md:py-16 lg:py-20"
+      className="relative px-4 py-16 md:px-8 md:py-24 lg:py-28"
       style={{ backgroundColor: THEME.darkBlue }}
     >
       <div className="mx-auto max-w-4xl">
-        <h1 className="font-heading text-center text-2xl font-bold leading-snug text-white md:text-4xl lg:text-[2.75rem]">
+        <h1 className="font-heading text-center text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
           {PRODUCT_NAME}
         </h1>
-        <p className="mt-4 text-center text-base text-white md:text-lg">
-          বউ কিংবা গার্লফ্রেন্ড যাকেই দিবেন খুশি হবেই{" "}
+        <p className="mt-6 text-center text-base text-slate-300 md:text-lg">
+          প্রিয়জনকে উপহার দিন, খুশি হবেই{" "}
           <span
-            className="inline-flex items-center rounded-full border-2 px-3 py-0.5 font-semibold"
-            style={{ borderColor: THEME.green, color: THEME.greenLight }}
+            className="inline-flex rounded-full px-4 py-1.5 text-sm font-medium"
+            style={{ backgroundColor: "rgba(45, 212, 191, 0.2)", color: THEME.greenLight }}
           >
             মাত্র {ORDER_UNIT_PRICE_BDT} টাকায়
           </span>
         </p>
 
-        {/* Three image placeholders */}
-        <div className="mt-8 grid grid-cols-3 gap-3 md:mt-10 md:gap-4">
+        <div className="mt-12 grid grid-cols-3 gap-4 md:mt-14 md:gap-6">
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="aspect-square w-full overflow-hidden rounded-lg bg-white/10"
+              className="aspect-square w-full overflow-hidden rounded-2xl bg-white/[0.06]"
               aria-hidden
             >
               <div className="flex h-full w-full items-center justify-center">
                 <svg
-                  className="h-12 w-12 text-white/30 md:h-16 md:w-16"
+                  className="h-12 w-12 text-white/20"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -49,7 +48,7 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="mt-8 flex justify-center md:mt-10">
+        <div className="mt-12 flex justify-center">
           <CtaButton>{CTA_LABEL}</CtaButton>
         </div>
       </div>

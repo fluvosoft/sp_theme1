@@ -4,7 +4,7 @@ import FaqAccordion from "../FaqAccordion";
 
 export default function FaqSection() {
   return (
-    <section className="px-4 py-14 md:px-8 md:py-20" style={{ backgroundColor: THEME.pinkDark }}>
+    <section className="px-4 py-14 md:px-8 md:py-20" style={{ backgroundColor: THEME.darkBlueDark }}>
       <div className="mx-auto max-w-2xl">
         <p className="font-heading text-center text-sm font-semibold uppercase tracking-widest text-white/80">
           প্রশ্নোত্তর

@@ -8,14 +8,10 @@ import {
   OrderForm,
   Footer,
 } from "./components/landing";
-import { THEME } from "./lib/constants";
 
 export default function Home() {
   return (
-    <div
-      className="min-h-screen font-body"
-      style={{ backgroundColor: THEME.darkBlue }}
-    >
+    <div className="min-h-screen font-body bg-white">
       <Hero />
       <ProductDescription />
       <Features />

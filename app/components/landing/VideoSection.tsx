@@ -5,7 +5,7 @@ const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ"; // Replace with your video ID
 
 export default function VideoSection() {
   return (
-    <section className="px-4 py-12 md:px-8 md:py-16" style={{ backgroundColor: THEME.pinkDark }}>
+    <section className="px-4 py-12 md:px-8 md:py-16" style={{ backgroundColor: THEME.darkBlueDark }}>
       <div className="mx-auto max-w-4xl">
         <h2 className="font-heading text-center text-xl font-bold text-white md:text-2xl">
           দেখুন কীভাবে কাজ করে
@@ -23,7 +23,7 @@ export default function VideoSection() {
         </div>
         <p className="mt-6 text-center text-base leading-relaxed text-white/95 md:text-lg">
           ত্বক যতই কালো হোক না কেন,{" "}
-          <span className="font-semibold" style={{ color: THEME.yellow }}>
+          <span className="font-semibold" style={{ color: THEME.greenLight }}>
             Saffron Goat Milk Soap
           </span>{" "}
           ব্যবহারে মাত্র ৭ দিনে ত্বক হবে স্পটলেস, চকচকে দুধের মতো ফর্সা, দাগহীন, মসৃণ ও নরম।

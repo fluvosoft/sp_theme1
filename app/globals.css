@@ -2,12 +2,16 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1a1a1a;
-  --dark-blue: #1e3a5f;
-  --dark-blue-light: #2a4a73;
-  --dark-blue-dark: #152a45;
-  --accent-green: #22c55e;
-  --accent-green-light: #4ade80;
+  --foreground: #0f172a;
+  --primary: #0f172a;
+  --primary-muted: #1e293b;
+  --primary-deep: #020617;
+  --accent: #0d9488;
+  --accent-light: #2dd4bf;
+  --surface: #f8fafc;
+  --muted: #64748b;
+  --section-padding-y: 4rem;
+  --section-padding-y-md: 5rem;
 }
 
 @theme inline {
@@ -28,7 +32,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography: titles use Noto Serif Bengali for better Bangla style */
 .font-heading {
   font-family: var(--font-heading-bengali), "Noto Serif Bengali", var(--font-bengali), ui-serif, serif;
 }
@@ -37,12 +40,23 @@ body {
   font-family: var(--font-bengali), "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Focus styles for accessibility */
+.section-pad {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-top: var(--section-padding-y-md);
+    padding-bottom: var(--section-padding-y-md);
+  }
+}
+
 :focus-visible {
-  outline: 2px solid var(--accent-green);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
 ::selection {
-  background: rgba(34, 197, 94, 0.2);
+  background: rgba(13, 148, 136, 0.15);
 }

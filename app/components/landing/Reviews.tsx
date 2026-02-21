@@ -5,7 +5,7 @@ const REVIEW_PLACEHOLDER_COUNT = 4;
 
 export default function Reviews() {
   return (
-    <section className="px-4 py-14 md:px-8 md:py-20" style={{ backgroundColor: THEME.pink }}>
+    <section className="px-4 py-14 md:px-8 md:py-20" style={{ backgroundColor: THEME.darkBlue }}>
       <div className="mx-auto max-w-5xl">
         <p className="font-heading text-center text-sm font-semibold uppercase tracking-widest text-white/80">
           গ্রাহকদের মতামত
